@@ -1,6 +1,7 @@
 # Machine Learning Assignment 2 – Classification Models Comparison
 
 **Course:** Machine Learning (AMLCCZG565) – BITS Pilani WILP, M.Tech (AIML)
+
 **Prepared by:** Sathiskumar N
 
 ---
