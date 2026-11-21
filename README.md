@@ -56,7 +56,13 @@ get about 88% accuracy. Therefore AUC, F1 and MCC are more meaningful than accur
 
 **Repository structure**
 
-- `model/bank_marketing_classification.ipynb` – complete code (preprocessing + 5 models + metrics + graph)
+- `model/bank_marketing_classification.ipynb` – complete notebook (preprocessing + all 5 models + metrics + graph)
+- `model/data_preprocessing.py` – shared data loading, preprocessing and evaluation functions
+- `model/logistic_regression.py` – Model 1: Logistic Regression
+- `model/decision_tree.py` – Model 2: Decision Tree
+- `model/knn.py` – Model 3: kNN
+- `model/naive_bayes.py` – Model 4: Naive Bayes
+- `model/random_forest.py` – Model 5: Random Forest (Ensemble)
 - `model/about.md` – description of the model folder
 - `README.md` – this file
 - `requirements.txt` – required Python libraries
@@ -64,11 +70,21 @@ get about 88% accuracy. Therefore AUC, F1 and MCC are more meaningful than accur
 - `metrics_comparison.png` – metrics comparison graph
 
 **Execution instructions**
+
+*Option 1 – Jupyter Notebook (all models together)*
 1. Open `model/bank_marketing_classification.ipynb` in Jupyter Notebook (tested on BITS Virtual Lab).
 2. Click **Run → Run All Cells**.
    - Step 0 installs the required libraries (`requirements.txt`).
    - Step 1 downloads the dataset directly from the UCI repository.
    - The remaining steps run preprocessing, train all 5 models and print the results table and graph.
+
+*Option 2 – Run each model separately (Python files)*
+1. Install the libraries: `pip install -r requirements.txt`
+2. Go to the model folder: `cd model`
+3. Run any model file, for example: `python logistic_regression.py`
+   (also `decision_tree.py`, `knn.py`, `naive_bayes.py`, `random_forest.py`)
+   - Each file uses `data_preprocessing.py`, downloads the dataset automatically and prints the 6 evaluation metrics.
+   - The results are identical to the notebook (same preprocessing, settings and random seed).
 
 ---
 
